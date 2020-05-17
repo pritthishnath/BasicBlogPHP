@@ -1,0 +1,22 @@
+.post {
+
+    &__article-body {
+
+        p {
+            line-height: 1.8;
+            letter-spacing: .03rem;
+            margin-bottom: 4rem;
+            font-size: 2rem;
+
+
+            &:nth-child(odd) {
+                color: $color-grey-dark-4;
+            }
+
+            &:nth-child(even) {
+                color: $color-grey-dark-2;
+            }
+
+        }
+    }
+}

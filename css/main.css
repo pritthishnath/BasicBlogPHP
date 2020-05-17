@@ -1,0 +1,223 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #F4F8FB;
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [navbar-start] 8rem [navbar-end main-start] minmax(60rem, max-content) [main-end footer-start] max-content [footer-end];
+      grid-template-rows: [navbar-start] 8rem [navbar-end main-start] minmax(60rem, -webkit-max-content) [main-end footer-start] -webkit-max-content [footer-end];
+      grid-template-rows: [navbar-start] 8rem [navbar-end main-start] minmax(60rem, max-content) [main-end footer-start] max-content [footer-end];
+  -ms-grid-columns: [full-start] minmax(3rem, 1fr) [center-start] ([col-start] minmax(min-content, 14rem) [col-end])[8] [center-end] minmax(3rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(-webkit-min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+      grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+}
+
+.heading-1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  padding: .5rem 0;
+}
+
+.heading-2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 700;
+  padding: .5rem 0;
+}
+
+.heading-3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.2rem;
+}
+
+.heading-4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.navbar {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url(../images/escheresque_@2X.png);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../images/escheresque_@2X.png);
+  background-size: 4rem 3rem;
+  grid-column: full-start / full-end;
+  border-bottom: 0.7px solid #bdbdbd;
+}
+
+.navbar .navigation {
+  list-style: none;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+
+.navbar .navigation__item {
+  margin: 0 2rem;
+}
+
+.navbar .navigation__link:visited, .navbar .navigation__link:link {
+  text-decoration: none;
+  color: #868686;
+  padding-bottom: .5rem;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+.navbar .navigation__link:visited:focus, .navbar .navigation__link:link:focus {
+  outline: none;
+}
+
+.navbar .navigation__item:hover .navigation__link:visited, .navbar .navigation__item:hover .navigation__link:link {
+  color: #636363;
+  border-bottom: 1px solid #636363;
+}
+
+.active > a.navigation__link:visited, .active > a.navigation__link:link {
+  color: #636363;
+  border-bottom: 1px solid #636363;
+}
+
+.main {
+  grid-column: center-start / center-end;
+  padding: 7rem 10rem;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: -webkit-max-content;
+  grid-auto-rows: max-content;
+  grid-gap: 6rem;
+}
+
+.footer {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#4e4e4e), to(rgba(78, 78, 78, 0.9)));
+  background-image: linear-gradient(to right bottom, #4e4e4e, rgba(78, 78, 78, 0.9));
+  grid-column: full-start / full-end;
+  color: #F4F8FB;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20rem;
+      grid-template-rows: 20rem;
+  -ms-grid-columns: (minmax(30rem, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(30rem, 1fr));
+  grid-gap: 4rem;
+  font-size: 1.4rem;
+  line-height: 1.7;
+}
+
+.footer__heading {
+  color: inherit;
+  font-family: "Lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: .6rem;
+}
+
+.footer .overview {
+  padding: 3rem;
+  padding-top: 5.3rem;
+}
+
+.footer .overview .copyright {
+  margin-top: 3rem;
+}
+
+.footer .resources {
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
+
+.footer .resources__list {
+  list-style: none;
+}
+
+.footer .resources__item {
+  margin: .6rem 0;
+}
+
+.footer .resources__link:visited, .footer .resources__link:link {
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+.footer .contact {
+  padding: 2rem 3rem;
+}
+
+.article__link:visited, .article__link:link {
+  text-decoration: none;
+  color: #4e4e4e;
+}
+
+.article__content {
+  background-color: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+  padding: 5rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.article__content:hover {
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-1%) scale(1.01);
+          transform: translateY(-1%) scale(1.01);
+}
+
+.article__date {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.article__desc {
+  margin-top: 2rem;
+}
+
+.post__article-body p {
+  line-height: 1.8;
+  letter-spacing: .03rem;
+  margin-bottom: 4rem;
+  font-size: 2rem;
+}
+
+.post__article-body p:nth-child(odd) {
+  color: #292828;
+}
+
+.post__article-body p:nth-child(even) {
+  color: #636363;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,45 @@
+textarea {
+    resize: none;
+}
+
+.modal-dialog-custom {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    max-width: none;
+}
+
+.modal-content-custom {
+    height: auto;
+    min-height: 100%;
+    border-radius: 0;
+    background-color: #ececec;
+}
+
+.post-title {
+    padding: 5px 13px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+}
+
+.post-title-char {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.post-desc {
+    font-family: 'Lato', sans-serif;
+    /* font-weight: 600; */
+}
+
+.post-desc-char {
+    margin-bottom: 20px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+/* .post-content {
+    font-family: 'Lato', sans-serif;
+} */

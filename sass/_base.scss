@@ -1,0 +1,43 @@
+$font-primary: 'Lato',
+sans-serif;
+$font-heading: 'Montserrat',
+sans-serif;
+
+$color-white: #fff;
+$color-black: #000;
+
+$color-grey-light-1: #F4F8FB;
+$color-grey-light-2: #bdbdbd;
+$color-grey-light-3: #999999;
+$color-grey-dark-1: #868686;
+$color-grey-dark-2: #636363;
+$color-grey-dark-3: #4e4e4e;
+$color-grey-dark-4: #292828;
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //10px
+}
+
+body {
+    background-color: $color-grey-light-1;
+    font-family: $font-primary;
+    font-size: 1.6rem;
+}
+
+.container {
+    // width: 114rem;
+    // margin: 0 auto;
+    display: grid;
+    grid-template-rows: [navbar-start] 8rem [navbar-end main-start] minmax(60rem, max-content) [main-end footer-start] max-content [footer-end];
+    grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
+}

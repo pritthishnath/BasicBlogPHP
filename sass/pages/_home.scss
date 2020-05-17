@@ -1,0 +1,36 @@
+.article {
+
+    &__link {
+
+        &:visited,
+        &:link {
+            text-decoration: none;
+            color: $color-grey-dark-3;
+        }
+    }
+
+    &__content {
+        background-color: $color-white;
+        border-radius: 10px;
+        box-shadow: 0 .5rem 1.5rem rgba($color-black, .2);
+        padding: 5rem;
+        backface-visibility: hidden;
+        transition: all .2s;
+
+        &:hover {
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+            transform: translateY(-1%) scale(1.01);
+        }
+    }
+
+    &__date {
+        font-size: 1.4rem;
+        font-style: italic;
+        margin-top: 1rem;
+    }
+
+
+    &__desc {
+        margin-top: 2rem;
+    }
+}

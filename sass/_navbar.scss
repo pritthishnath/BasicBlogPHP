@@ -1,0 +1,62 @@
+.navbar {
+    // background-color: #aaa;
+    background-image: linear-gradient(rgba($color-white, 0.4), rgba($color-white, 0.4)),
+        url(../images/escheresque_@2X.png);
+    background-size: 4rem 3rem;
+    grid-column: full-start / full-end;
+    border-bottom: .7px solid $color-grey-light-2;
+
+
+    .navigation {
+        list-style: none;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        font-family: $font-heading;
+        font-weight: 400;
+        font-size: 1.7rem;
+
+        &__item {
+            margin: 0 2rem;
+
+
+        }
+
+        &__link {
+
+            &:visited,
+            &:link {
+                text-decoration: none;
+                color: $color-grey-dark-1;
+                padding-bottom: .5rem;
+                transition: all .1s;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+
+        &__item:hover .navigation__link {
+
+            &:visited,
+            &:link {
+
+                color: $color-grey-dark-2;
+                border-bottom: 1px solid $color-grey-dark-2;
+            }
+        }
+
+    }
+}
+
+.active>a.navigation__link {
+
+    &:visited,
+    &:link {
+        color: $color-grey-dark-2;
+        border-bottom: 1px solid $color-grey-dark-2;
+    }
+}
